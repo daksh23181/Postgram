@@ -1,4 +1,4 @@
-Postgram Social Media Dashboard
+Postgram Social Media 
 ===============================
 
 Postgram is a comprehensive social media management dashboard that allows administrators to view, insert, and manage user data, posts, comments, and other social media interactions.
@@ -44,9 +44,9 @@ Technologies Used
 Installation
 ------------
 
-1.  bashCopygit clone https://github.com/yourusername/postgram-dashboard.git
+1.  git clone https://github.com/yourusername/postgram-dashboard.git
     
-2.  bashCopycd postgram-dashboard
+2.  cd postgram-dashboard
     
 3.  Set up a local server (XAMPP, WAMP, or MAMP recommended)
     
@@ -55,10 +55,6 @@ Installation
 5.  Access the application through your local server (typically [http://localhost/postgram-dashboard](http://localhost/postgram-dashboard))
     
 
-File Structure
---------------
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   postgram-dashboard/  ├── index.html          # Main dashboard page  ├── insert.html         # Data insertion interface  ├── view.html           # Data viewing interface  ├── styles.css          # Main stylesheet  ├── script.js           # Main JavaScript for index page  ├── view.js             # JavaScript for data viewing  ├── api/                # API endpoints  │   ├── users.php  │   ├── profiles.php  │   ├── posts.php  │   └── ...  ├── assets/             # Static assets  │   ├── logo.svg  │   ├── images/  │   └── ...  └── README.md           # This file   `
 
 License
 -------
