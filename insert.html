@@ -134,122 +134,132 @@
     </form>
   </div>
 
+
+
   <!-- Post Form -->
   <div id="post-form" class="form-container">
     <button class="close-btn">×</button>
     <h2>Add Post</h2>
-    <form id="postForm">
+    <form id="postForm" action="insert_post.php" method="post">
       <div class="form-group">
         <label for="post-id">Post ID:</label>
-        <input type="number" id="post-id" required>
+        <input type="number" id="post-id" name="Post_id" required>
       </div>
       <div class="form-group">
         <label for="post-profile-id">User Profile ID:</label>
-        <input type="number" id="post-profile-id" required>
+        <input type="number" id="post-profile-id" name="UserProfileID" required>
       </div>
       <div class="form-group">
         <label for="caption">Caption:</label>
-        <input type="text" id="caption" maxlength="50">
+        <input type="text" id="caption" name="Caption" maxlength="50">
       </div>
       <div class="form-group">
         <label for="image">Image:</label>
-        <input type="text" id="image" maxlength="20">
+        <input type="text" id="image" name="Image" maxlength="20">
       </div>
       <div class="form-group">
         <label for="video">Video:</label>
-        <input type="text" id="video" maxlength="20">
+        <input type="text" id="video" name="Video" maxlength="20">
       </div>
       <button type="submit" class="submit-btn" style="background-color: #007BFF; color: white; border: none; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 4px;">Submit</button>
     </form>
   </div>
+
+
 
   <!-- Friendship Form -->
   <div id="friendship-form" class="form-container">
     <button class="close-btn">×</button>
     <h2>Add Friendship</h2>
-    <form id="friendshipForm">
+    <form id="friendshipForm" action="insert_friendship.php" method="post">
       <div class="form-group">
         <label for="friend1">User Profile ID 1:</label>
-        <input type="number" id="friend1" required>
+        <input type="number" id="friend1" name="f1" required>
       </div>
       <div class="form-group">
         <label for="friend2">User Profile ID 2:</label>
-        <input type="number" id="friend2" required>
+        <input type="number" id="friend2" name="f2" required>
       </div>
       <button type="submit" class="submit-btn" style="background-color: #007BFF; color: white; border: none; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 4px;">Submit</button>
     </form>
   </div>
+
+
 
   <!-- Comment Form -->
   <div id="comment-form" class="form-container">
     <button class="close-btn">×</button>
     <h2>Add Comment</h2>
-    <form id="commentForm">
+    <form id="commentForm" action="insert_comment.php" method="post">
       <div class="form-group">
         <label for="comment-id">Comment ID:</label>
-        <input type="number" id="comment-id" required>
+        <input type="number" id="comment-id" name="Post_Comment_ID" required>
       </div>
       <div class="form-group">
         <label for="comment-post-id">Post ID:</label>
-        <input type="number" id="comment-post-id" required>
+        <input type="number" id="comment-post-id" name="Post_id" required>
       </div>
       <div class="form-group">
         <label for="comment-profile-id">User Profile ID:</label>
-        <input type="number" id="comment-profile-id" required>
+        <input type="number" id="comment-profile-id" name="UserProfileID" required>
       </div>
       <div class="form-group">
         <label for="comment-text">Comment Text:</label>
-        <textarea id="comment-text" maxlength="150" rows="3"></textarea>
+        <textarea id="comment-text" name="Text_commented" maxlength="150" rows="3"></textarea>
       </div>
       <button type="submit" class="submit-btn" style="background-color: #007BFF; color: white; border: none; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 4px;">Submit</button>
     </form>
   </div>
+
+
 
   <!-- Like Form -->
   <div id="like-form" class="form-container">
     <button class="close-btn">×</button>
     <h2>Add Like</h2>
-    <form id="likeForm">
+    <form id="likeForm" action="insert_like.php" method="post">
       <div class="form-group">
         <label for="like-id">Like ID:</label>
-        <input type="number" id="like-id" required>
+        <input type="number" id="like-id" name="Post_Like_ID" required>
       </div>
       <div class="form-group">
         <label for="like-post-id">Post ID:</label>
-        <input type="number" id="like-post-id" required>
+        <input type="number" id="like-post-id" name="Post_id" required>
       </div>
       <div class="form-group">
         <label for="like-profile-id">User Profile ID:</label>
-        <input type="number" id="like-profile-id" required>
+        <input type="number" id="like-profile-id" name="UserProfileID" required>
       </div>
       <button type="submit" class="submit-btn" style="background-color: #007BFF; color: white; border: none; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 4px;">Submit</button>
     </form>
   </div>
 
+
+
   <!-- Story Form -->
   <div id="story-form" class="form-container">
     <button class="close-btn">×</button>
     <h2>Add Story</h2>
-    <form id="storyForm">
+    <form id="storyForm" action="insert_story.php" method="post">
       <div class="form-group">
         <label for="story-id">Story ID:</label>
-        <input type="number" id="story-id" required>
+        <input type="number" id="story-id" name="Story_ID" required>
       </div>
       <div class="form-group">
         <label for="story-profile-id">User Profile ID:</label>
-        <input type="number" id="story-profile-id" required>
+        <input type="number" id="story-profile-id" name="UserProfileID" required>
       </div>
       <div class="form-group">
         <label for="story-likes">Likes:</label>
-        <input type="number" id="story-likes" value="0">
+        <input type="number" id="story-likes" name="Likes" value="0">
       </div>
       <div class="form-group">
         <label for="story-shares">Shares:</label>
-        <input type="number" id="story-shares" value="0">
+        <input type="number" id="story-shares" name="Shares" value="0">
       </div>
       <div class="form-group">
         <label for="story-comments">Comments:</label>
-        <input type="number" id="story-comments" value="0">
+        <input type="number" id="story-comments" name="Comments" value="0">
       </div>
       <button type="submit" class="submit-btn" style="background-color: #007BFF; color: white; border: none; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 4px;">Submit</button>
     </form>

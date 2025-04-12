@@ -40,7 +40,7 @@ create table if not exists User_Post (
     UserProfileID INT,
     Caption VARCHAR(50),
     Created_timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    Modified_timestamp TIMESTAMP,
+    Modified_timestamp TIMESTAMP NULL,
     Image VARCHAR(20),
     Video VARCHAR(20),
     FOREIGN KEY (UserProfileID) REFERENCES User_Profile(UserProfileID)
