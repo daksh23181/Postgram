@@ -2,7 +2,7 @@
 header('Content-Type: application/json');
 
 try {
-        
+    // Create connection
     $conn = mysqli_connect('localhost', 'root', '', 'postgram');
 
     // Check connection
@@ -11,21 +11,21 @@ try {
     }
 
     // Get POST data
+    $profileID = $_POST['UserProfileID'];
     $userID = $_POST['UserID'];
-    $email = $_POST['Email'];
-    $street = $_POST['Address_street'];
-    $city = $_POST['Address_city'];
-    $state = $_POST['Address_state'];
-    $pincode = $_POST['Pincode'];
-    $mobile = $_POST['Mobile'];
+    $username = $_POST['Username'];
+    $firstName = $_POST['First_Name'];
+    $lastName = $_POST['Last_Name'];
+    $dob = $_POST['DOB'];
+    $age = $_POST['Age'];
 
     // Prepare and bind
-    $stmt = $conn->prepare("INSERT INTO user (UserID, Email, Address_street, Address_city, Address_state, Pincode, Mobile) VALUES (?, ?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("issssis", $userID, $email, $street, $city, $state, $pincode, $mobile);
+    $stmt = $conn->prepare("INSERT INTO User_Profile (UserProfileID, UserID, Username, First_Name, Last_Name, DOB, Age) VALUES (?, ?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("iissssi", $profileID, $userID, $username, $firstName, $lastName, $dob, $age);
 
     // Execute
     if ($stmt->execute()) {
-        echo json_encode(['success' => true, 'message' => 'User added successfully']);
+        echo json_encode(['success' => true, 'message' => 'Profile added successfully']);
     } else {
         echo json_encode(['success' => false, 'message' => 'Error: ' . $stmt->error]);
     }

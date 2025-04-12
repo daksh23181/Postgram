@@ -30,48 +30,5 @@ document.addEventListener('DOMContentLoaded', function() {
       this.style.display = 'none';
     });
     
-    // Form submission handling with PHP integration
-    const forms = document.querySelectorAll('form');
     
-    forms.forEach(form => {
-      form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        const formId = this.id;
-        const formData = new FormData(this);
-        const endpoint = getEndpointForForm(formId);
-        
-        fetch(endpoint, {
-          method: 'POST',
-          body: formData
-        })
-        .then(response => response.json())
-        .then(data => {
-          if (data.success) {
-            alert('Data inserted successfully!');
-            this.reset();
-            this.closest('.form-container').style.display = 'none';
-            overlay.style.display = 'none';
-          } else {
-            alert('Error: ' + data.message);
-          }
-        })
-        .catch(error => {
-          alert('Error: ' + error.message);
-        });
-      });
-    });
-    
-    function getEndpointForForm(formId) {
-      const formEndpoints = {
-        'userForm': 'insert_user.php',
-        'loginForm': 'insert_login.php',
-        'profileForm': 'insert_profile.php',
-        'postForm': 'insert_post.php',
-        'friendshipForm': 'insert_friendship.php',
-        'commentForm': 'insert_comment.php',
-        'likeForm': 'insert_like.php',
-        'storyForm': 'insert_story.php'
-      };
-      return formEndpoints[formId] || '';
-    }
   });

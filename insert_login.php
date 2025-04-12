@@ -11,21 +11,18 @@ try {
     }
 
     // Get POST data
+    $loginID = $_POST['Login_id'];
+    $username = $_POST['Login_username'];
+    $password = $_POST['Login_password'];
     $userID = $_POST['UserID'];
-    $email = $_POST['Email'];
-    $street = $_POST['Address_street'];
-    $city = $_POST['Address_city'];
-    $state = $_POST['Address_state'];
-    $pincode = $_POST['Pincode'];
-    $mobile = $_POST['Mobile'];
 
     // Prepare and bind
-    $stmt = $conn->prepare("INSERT INTO user (UserID, Email, Address_street, Address_city, Address_state, Pincode, Mobile) VALUES (?, ?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("issssis", $userID, $email, $street, $city, $state, $pincode, $mobile);
-
+    $stmt = $conn->prepare("INSERT INTO login (Login_id, Login_username, Login_password, UserID) VALUES (?, ?, ?, ?)");
+    $stmt->bind_param("issi", $loginID, $username, $password, $userID);
+    
     // Execute
     if ($stmt->execute()) {
-        echo json_encode(['success' => true, 'message' => 'User added successfully']);
+        echo json_encode(['success' => true, 'message' => 'Login credentials added successfully']);
     } else {
         echo json_encode(['success' => false, 'message' => 'Error: ' . $stmt->error]);
     }
@@ -39,3 +36,4 @@ try {
     ]);
 }
 ?>
+

@@ -33,98 +33,102 @@
 
   <!-- User Form -->
   <div id="user-form" class="form-container">
-    <button class="close-btn">×</button>
+    <button class="close-btn">x</button>
     <h2>Add User</h2>
-    <form id="userForm">
+    <form id="userForm" action="insert_user.php" method="post">
       <div class="form-group">
         <label for="user-id">User ID:</label>
-        <input type="number" id="user-id" required>
+        <input type="number" id="user-id" name="UserID" required>
       </div>
       <div class="form-group">
         <label for="email">Email:</label>
-        <input type="email" id="email" required>
+        <input type="email" id="email" name="Email" required>
       </div>
       <div class="form-group">
         <label for="street">Street:</label>
-        <input type="text" id="street" required>
+        <input type="text" id="street" name="Address_street" required>
       </div>
       <div class="form-group">
         <label for="city">City:</label>
-        <input type="text" id="city" required>
+        <input type="text" id="city" name="Address_city" required>
       </div>
       <div class="form-group">
         <label for="state">State:</label>
-        <input type="text" id="state" required>
+        <input type="text" id="state" name="Address_state" required>
       </div>
       <div class="form-group">
         <label for="pincode">Pincode:</label>
-        <input type="number" id="pincode" required>
+        <input type="number" id="pincode" name="Pincode" required>
       </div>
       <div class="form-group">
         <label for="mobile">Mobile:</label>
-        <input type="text" id="mobile">
+        <input type="text" id="mobile" name="Mobile">
       </div>
       <button type="submit" class="submit-btn" style="background-color: #007BFF; color: white; border: none; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 4px;">Submit</button>
     </form>
   </div>
+
+
 
   <!-- Login Form -->
   <div id="login-form" class="form-container">
     <button class="close-btn">×</button>
     <h2>Add Login Credentials</h2>
-    <form id="loginForm">
+    <form id="loginForm" action="insert_login.php" method="post">
       <div class="form-group">
         <label for="login-id">Login ID:</label>
-        <input type="number" id="login-id" required>
+        <input type="number" id="login-id" name="Login_id" required>
       </div>
       <div class="form-group">
         <label for="login-username">Username:</label>
-        <input type="text" id="login-username" required maxlength="10">
+        <input type="text" id="login-username" name="Login_username" required>
       </div>
       <div class="form-group">
         <label for="login-password">Password:</label>
-        <input type="password" id="login-password" required maxlength="20">
+        <input type="password" id="login-password" name="Login_password">
       </div>
       <div class="form-group">
         <label for="login-user-id">User ID:</label>
-        <input type="number" id="login-user-id" required>
+        <input type="number" id="login-user-id" name="UserID" required>
       </div>
       <button type="submit" class="submit-btn" style="background-color: #007BFF; color: white; border: none; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 4px;">Submit</button>
     </form>
   </div>
 
+
+
   <!-- Profile Form -->
   <div id="profile-form" class="form-container">
     <button class="close-btn">×</button>
     <h2>Add Profile Data</h2>
-    <form id="profileForm">
+    <form id="profileForm" action="insert_profile.php" method="post">
       <div class="form-group">
         <label for="profile-id">User Profile ID:</label>
-        <input type="number" id="profile-id" required>
+        <input type="number" id="profile-id" name="UserProfileID" required>
       </div>
       <div class="form-group">
         <label for="profile-user-id">User ID:</label>
-        <input type="number" id="profile-user-id" required>
+        <input type="number" id="profile-user-id" name="UserID" required>
       </div>
       <div class="form-group">
         <label for="username">Username:</label>
-        <input type="text" id="username" required maxlength="20">
+        <input type="text" id="username" name="Username" required maxlength="20">
       </div>
       <div class="form-group">
         <label for="first-name">First Name:</label>
-        <input type="text" id="first-name" required maxlength="20">
+        <input type="text" id="first-name" name="First_Name" required maxlength="20">
       </div>
       <div class="form-group">
         <label for="last-name">Last Name:</label>
-        <input type="text" id="last-name" maxlength="20">
+        <input type="text" id="last-name" name="Last_Name" maxlength="20">
       </div>
       <div class="form-group">
         <label for="dob">Date of Birth:</label>
-        <input type="date" id="dob">
+        <input type="date" id="dob" name="DOB">
       </div>
       <div class="form-group">
         <label for="age">Age:</label>
-        <input type="number" id="age">
+        <input type="number" id="age" name="Age">
       </div>
       <button type="submit" class="submit-btn" style="background-color: #007BFF; color: white; border: none; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 4px;">Submit</button>
     </form>
