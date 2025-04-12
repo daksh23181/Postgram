@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Insert Data - Postgram</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="top-left">Postgram</div>
+
+  <div class="nav-buttons">
+    <button class="btn nav-btn" onclick="window.location.href='index.html'">Home</button>
+    <button class="btn nav-btn" onclick="window.location.href='view.html'">View Data</button>
+  </div>
+
+  <div class="main-container">
+    <h1>Insert Options</h1>
+    <div class="btn-group">
+      <button class="btn" data-form="user-form">User Data</button>
+      <button class="btn" data-form="login-form">Login Credentials</button>
+      <button class="btn" data-form="profile-form">Profile Data</button>
+      <button class="btn" data-form="post-form">Post</button>
+      <button class="btn" data-form="friendship-form">Friendship</button>
+      <button class="btn" data-form="comment-form">Comments</button>
+      <button class="btn" data-form="like-form">Likes</button>
+      <button class="btn" data-form="story-form">Story</button>
+    </div>
+  </div>
+
+  <!-- Overlay for forms -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- User Form -->
+  <div id="user-form" class="form-container">
+    <button class="close-btn">×</button>
+    <h2>Add User</h2>
+    <form id="userForm">
+      <div class="form-group">
+        <label for="user-id">User ID:</label>
+        <input type="number" id="user-id" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+      </div>
+      <div class="form-group">
+        <label for="street">Street:</label>
+        <input type="text" id="street" required>
+      </div>
+      <div class="form-group">
+        <label for="city">City:</label>
+        <input type="text" id="city" required>
+      </div>
+      <div class="form-group">
+        <label for="state">State:</label>
+        <input type="text" id="state" required>
+      </div>
+      <div class="form-group">
+        <label for="pincode">Pincode:</label>
+        <input type="number" id="pincode" required>
+      </div>
+      <div class="form-group">
+        <label for="mobile">Mobile:</label>
+        <input type="text" id="mobile">
+      </div>
+      <button type="submit" class="submit-btn" style="background-color: #007BFF; color: white; border: none; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 4px;">Submit</button>
+    </form>
+  </div>
+
+  <!-- Login Form -->
+  <div id="login-form" class="form-container">
+    <button class="close-btn">×</button>
+    <h2>Add Login Credentials</h2>
+    <form id="loginForm">
+      <div class="form-group">
+        <label for="login-id">Login ID:</label>
+        <input type="number" id="login-id" required>
+      </div>
+      <div class="form-group">
+        <label for="login-username">Username:</label>
+        <input type="text" id="login-username" required maxlength="10">
+      </div>
+      <div class="form-group">
+        <label for="login-password">Password:</label>
+        <input type="password" id="login-password" required maxlength="20">
+      </div>
+      <div class="form-group">
+        <label for="login-user-id">User ID:</label>
+        <input type="number" id="login-user-id" required>
+      </div>
+      <button type="submit" class="submit-btn" style="background-color: #007BFF; color: white; border: none; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 4px;">Submit</button>
+    </form>
+  </div>
+
+  <!-- Profile Form -->
+  <div id="profile-form" class="form-container">
+    <button class="close-btn">×</button>
+    <h2>Add Profile Data</h2>
+    <form id="profileForm">
+      <div class="form-group">
+        <label for="profile-id">User Profile ID:</label>
+        <input type="number" id="profile-id" required>
+      </div>
+      <div class="form-group">
+        <label for="profile-user-id">User ID:</label>
+        <input type="number" id="profile-user-id" required>
+      </div>
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" required maxlength="20">
+      </div>
+      <div class="form-group">
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" required maxlength="20">
+      </div>
+      <div class="form-group">
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" maxlength="20">
+      </div>
+      <div class="form-group">
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob">
+      </div>
+      <div class="form-group">
+        <label for="age">Age:</label>
+        <input type="number" id="age">
+      </div>
+      <button type="submit" class="submit-btn" style="background-color: #007BFF; color: white; border: none; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 4px;">Submit</button>
+    </form>
+  </div>
+
+  <!-- Post Form -->
+  <div id="post-form" class="form-container">
+    <button class="close-btn">×</button>
+    <h2>Add Post</h2>
+    <form id="postForm">
+      <div class="form-group">
+        <label for="post-id">Post ID:</label>
+        <input type="number" id="post-id" required>
+      </div>
+      <div class="form-group">
+        <label for="post-profile-id">User Profile ID:</label>
+        <input type="number" id="post-profile-id" required>
+      </div>
+      <div class="form-group">
+        <label for="caption">Caption:</label>
+        <input type="text" id="caption" maxlength="50">
+      </div>
+      <div class="form-group">
+        <label for="image">Image:</label>
+        <input type="text" id="image" maxlength="20">
+      </div>
+      <div class="form-group">
+        <label for="video">Video:</label>
+        <input type="text" id="video" maxlength="20">
+      </div>
+      <button type="submit" class="submit-btn" style="background-color: #007BFF; color: white; border: none; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 4px;">Submit</button>
+    </form>
+  </div>
+
+  <!-- Friendship Form -->
+  <div id="friendship-form" class="form-container">
+    <button class="close-btn">×</button>
+    <h2>Add Friendship</h2>
+    <form id="friendshipForm">
+      <div class="form-group">
+        <label for="friend1">User Profile ID 1:</label>
+        <input type="number" id="friend1" required>
+      </div>
+      <div class="form-group">
+        <label for="friend2">User Profile ID 2:</label>
+        <input type="number" id="friend2" required>
+      </div>
+      <button type="submit" class="submit-btn" style="background-color: #007BFF; color: white; border: none; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 4px;">Submit</button>
+    </form>
+  </div>
+
+  <!-- Comment Form -->
+  <div id="comment-form" class="form-container">
+    <button class="close-btn">×</button>
+    <h2>Add Comment</h2>
+    <form id="commentForm">
+      <div class="form-group">
+        <label for="comment-id">Comment ID:</label>
+        <input type="number" id="comment-id" required>
+      </div>
+      <div class="form-group">
+        <label for="comment-post-id">Post ID:</label>
+        <input type="number" id="comment-post-id" required>
+      </div>
+      <div class="form-group">
+        <label for="comment-profile-id">User Profile ID:</label>
+        <input type="number" id="comment-profile-id" required>
+      </div>
+      <div class="form-group">
+        <label for="comment-text">Comment Text:</label>
+        <textarea id="comment-text" maxlength="150" rows="3"></textarea>
+      </div>
+      <button type="submit" class="submit-btn" style="background-color: #007BFF; color: white; border: none; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 4px;">Submit</button>
+    </form>
+  </div>
+
+  <!-- Like Form -->
+  <div id="like-form" class="form-container">
+    <button class="close-btn">×</button>
+    <h2>Add Like</h2>
+    <form id="likeForm">
+      <div class="form-group">
+        <label for="like-id">Like ID:</label>
+        <input type="number" id="like-id" required>
+      </div>
+      <div class="form-group">
+        <label for="like-post-id">Post ID:</label>
+        <input type="number" id="like-post-id" required>
+      </div>
+      <div class="form-group">
+        <label for="like-profile-id">User Profile ID:</label>
+        <input type="number" id="like-profile-id" required>
+      </div>
+      <button type="submit" class="submit-btn" style="background-color: #007BFF; color: white; border: none; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 4px;">Submit</button>
+    </form>
+  </div>
+
+  <!-- Story Form -->
+  <div id="story-form" class="form-container">
+    <button class="close-btn">×</button>
+    <h2>Add Story</h2>
+    <form id="storyForm">
+      <div class="form-group">
+        <label for="story-id">Story ID:</label>
+        <input type="number" id="story-id" required>
+      </div>
+      <div class="form-group">
+        <label for="story-profile-id">User Profile ID:</label>
+        <input type="number" id="story-profile-id" required>
+      </div>
+      <div class="form-group">
+        <label for="story-likes">Likes:</label>
+        <input type="number" id="story-likes" value="0">
+      </div>
+      <div class="form-group">
+        <label for="story-shares">Shares:</label>
+        <input type="number" id="story-shares" value="0">
+      </div>
+      <div class="form-group">
+        <label for="story-comments">Comments:</label>
+        <input type="number" id="story-comments" value="0">
+      </div>
+      <button type="submit" class="submit-btn" style="background-color: #007BFF; color: white; border: none; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 4px;">Submit</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
