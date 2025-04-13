@@ -8,15 +8,19 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-  <div class="top-left">Postgram</div>
+  <div class="top-left">
+    <img src="logo.png" alt="Postgram Logo" style="height: 60px;">
+  </div>
+  <div class="nav-buttons" style="display: flex; justify-content: space-between; align-items: center; gap: 20px;">
+    <div style="display: flex; gap: 20px;">
+      <button class="btn nav-btn" onclick="window.location.href='index.html'">Home</button>
+      <button class="btn nav-btn" onclick="window.location.href='view.html'">View Data</button>
+    </div>
+    <button class="btn nav-btn" onclick="window.location.href='query.html'">Query</button>
+  </div>
 
   <!-- Notification Container -->
   <div class="notification-container" id="notificationContainer"></div>
-
-  <div class="nav-buttons">
-    <button class="btn nav-btn" onclick="window.location.href='index.html'">Home</button>
-    <button class="btn nav-btn" onclick="window.location.href='view.html'">View Data</button>
-  </div>
 
   <div class="main-container">
     <h1>Insert Options</h1>
